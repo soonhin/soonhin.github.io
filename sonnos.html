@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a1628">
 <title>CHONG SOON HIN — Contact</title>
 <style>
@@ -1017,16 +1017,16 @@ a { color: inherit; text-decoration: none; }
   <div class="header">
     <div class="header-content">
       <!-- Triple-click/tap avatar to toggle advanced mode -->
-    <div class="avatar" id="avatarToggle">CS</div>
+    <div class="avatar" id="avatarToggle" aria-label="Toggle advanced mode" role="button" tabindex="0">CS</div>
       <div class="name"><span id="ownerNameUpper"></span> &nbsp;<span id="ownerNameChinese" style="color:rgba(255,255,255,0.85);font-weight:700;letter-spacing:2px;font-family:'STSong','Songti SC','SimSun','PingFang SC','Microsoft YaHei',serif"></span></div>
       <div class="title-line">Automation Manager</div>
       <div class="company">SYNAP TECHNOLOGY PTE. LTD.</div>
       <div class="company" style="margin-top:3px;letter-spacing:1.5px;font-size:11px;opacity:0.72">SINGAPORE</div>
     </div>
-    <button class="info-btn adv" onclick="showEnvInfo()" title="Device info">
+    <button class="info-btn adv" onclick="showEnvInfo()" title="Device info" aria-label="Device information">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
     </button>
-    <button class="share-header-btn adv" onclick="shareCard()" title="Share this card">
+    <button class="share-header-btn adv" onclick="shareCard()" title="Share this card" aria-label="Share this vNamecard">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
     </button>
   </div>
@@ -1063,12 +1063,12 @@ a { color: inherit; text-decoration: none; }
       </a>
     </div>
     <div class="simple-save-wrap">
-      <div class="simple-cta-stack contact-saved">
-        <button class="simple-meet-btn" onclick="showMeetingModal()">
+      <div class="simple-cta-stack">
+        <button class="simple-meet-btn" onclick="showMeetingModal()" aria-label="Meet Soon Hin">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           <span class="owner-meet-label"></span>
         </button>
-        <button class="simple-save-btn" onclick="saveContact()">
+        <button class="simple-save-btn" onclick="saveContact()" aria-label="Save Contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
           Save Contact
         </button>
@@ -1105,11 +1105,11 @@ a { color: inherit; text-decoration: none; }
 
   <!-- Save Contact + Schedule Meeting -->
   <div class="save-contact-wrap adv" style="gap:8px">
-    <button id="advSaveBtn" class="save-btn" onclick="saveContact()" style="flex:1;white-space:nowrap">
+    <button id="advSaveBtn" class="save-btn" onclick="saveContact()" style="flex:1;white-space:nowrap" aria-label="Save Contact">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
       Save Contact
     </button>
-    <button class="save-btn" onclick="showMeetingModal()" style="flex:1;white-space:nowrap">
+    <button class="save-btn" onclick="showMeetingModal()" style="flex:1;white-space:nowrap" aria-label="Meet Soon Hin">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"></path></svg>
       <span class="owner-meet-label"></span>
     </button>
@@ -1119,10 +1119,10 @@ a { color: inherit; text-decoration: none; }
 
   <!-- Contact Details — collapsible -->
   <div class="details-section">
-    <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="toggleDetails()">
+    <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="toggleDetails()" aria-label="Toggle contact details" role="button" tabindex="0">
       <div class="section-label" style="margin-bottom:0">Contact Details <span id="detailsArrow" style="font-size:11px;display:inline-block;transition:transform 0.2s">▸</span></div>
       <div style="position:relative">
-        <button class="copy-icon" onclick="event.stopPropagation();copyAllDetails()" title="Copy all">
+        <button class="copy-icon" onclick="event.stopPropagation();copyAllDetails()" title="Copy all" aria-label="Copy all contact details">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
         </button>
         <span id="detailsCopyTip" style="position: absolute; right: 36px; top: 50%; transform: translateY(-50%); background: var(--text-1); color: var(--card-bg); font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.25s; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;">All details copied ✓</span>
@@ -1229,7 +1229,7 @@ a { color: inherit; text-decoration: none; }
 
   <!-- Collapse bar — visible in advanced mode only — returns to simple view -->
   <div class="collapse-bar-wrap">
-    <button class="collapse-bar" onclick="toggleCardMode()">
+    <button class="collapse-bar" onclick="toggleCardMode()" aria-label="Back to simple view">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
       Back to simple view
     </button>
@@ -1266,7 +1266,7 @@ a { color: inherit; text-decoration: none; }
 // ──────────────────────────────────────
 // CONFIG
 // ──────────────────────────────────────
-const CARD_VERSION = 'v18.2.57'; // single source of truth for displayed version
+const CARD_VERSION = 'v18.2.58'; // single source of truth for displayed version
 const CONTACT_SAVED_KEY = 'soonhinCardContactSaved';
 const CONTACT_SAVE_COUNT_KEY = 'soonhinCardSaveClicks';
 const CONTACT_SAVE_HIDE_AFTER = 5;
@@ -1492,7 +1492,12 @@ function updateChatIcons() {
   if (tgTab) tgTab.style.display = chatReachable.telegram === false ? 'none' : '';
 }
 
-runChatProbes();
+function probeChatReachability() {
+  runChatProbes();
+  return chatReachable;
+}
+
+probeChatReachability();
 
 function runCalendarProbes() {
   probeService('outlook', 'https://outlook.office.com/favicon.ico', (ok) => {
