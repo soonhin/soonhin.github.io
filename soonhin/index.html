@@ -1313,7 +1313,7 @@ function getOwnerEventsLabel() { return `Your events with ${C.shortName}`; }
 function getOwnerVcardFilename() { return `${C.fileStem}.vcf`; }
 function getOwnerCardFilename() { return `${C.fileStem}_vNameCard.html`; }
 function applyOwnerIdentityBindings() {
-  document.title = `${C.name} — Contact`;
+  document.title = `${C.name} — Synap viCard`;
   const upper = document.getElementById('ownerNameUpper');
   if (upper) upper.textContent = C.name;
   const cn = document.getElementById('ownerNameChinese');
